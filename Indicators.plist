@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Farm household income ($/household)</string>
+		<key>Rate</key>
+		<string>na</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Farm debt-asset ratio</string>
+		<key>Rate</key>
+		<string>-7.3%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Farm equity ($ bil)</string>
+		<key>Rate</key>
+		<string>9.8%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Net value added ($ bil)</string>
+		<key>Rate</key>
+		<string>27.1%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Net cash income ($ bil)</string>
+		<key>Rate</key>
+		<string>35.5%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Gross cash income ($ bil)</string>
+		<key>Rate</key>
+		<string>16.8%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Direct government payments ($ bil)</string>
+		<key>Rate</key>
+		<string>-15.9%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Livestock</string>
+		<key>Rate</key>
+		<string>17.3%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Crops</string>
+		<key>Rate</key>
+		<string>16.0%</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Cash receipts</string>
+		<key>Rate</key>
+		<string>16.5%</string>
+	</dict>
+</array>
+</plist>

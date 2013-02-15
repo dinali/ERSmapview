@@ -8,6 +8,7 @@
 // notice and use restrictions.
 //
 // See the use restrictions at http://help.arcgis.com/en/sdk/10.0/usageRestrictions.htm
+// Description: this will be the tabbed version eventually
 //
 
 #import <UIKit/UIKit.h>
@@ -27,7 +28,7 @@
 #define kLayerDefinitionFormat @"STATE_NAME = '%@'"
 
 
-@interface MapViewDemoViewController : UIViewController <AGSMapViewLayerDelegate> {
+@interface MapViewController : UIViewController <AGSMapViewLayerDelegate> {
 	
 	//container for map layers
 	AGSMapView *_mapView;

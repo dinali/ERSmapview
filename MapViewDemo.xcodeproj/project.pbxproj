@@ -12,12 +12,17 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* MapViewDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* MapViewDemoViewController.xib */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* MapViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MapViewDemoViewController.m */; };
+		28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MapViewController.m */; };
 		3BB1591610D1CB860095F852 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB1591510D1CB860095F852 /* CoreLocation.framework */; };
 		3BB1591810D1CB860095F852 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB1591710D1CB860095F852 /* QuartzCore.framework */; };
 		4B8B240514062A7C00820FDB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8B240414062A7C00820FDB /* libz.dylib */; };
+		96172CA316CEAFCF000ECD81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96172CA216CEAFCF000ECD81 /* MainStoryboard.storyboard */; };
+		96172CA516CEB677000ECD81 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 96172CA416CEB677000ECD81 /* map.png */; };
+		96172CCC16CEB6F4000ECD81 /* QueryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96172CCB16CEB6F4000ECD81 /* QueryDetailsViewController.m */; };
+		96172CCF16CEB710000ECD81 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96172CCE16CEB710000ECD81 /* QueryViewController.m */; };
+		96172CD216CEDBA4000ECD81 /* IndicatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96172CD116CEDBA4000ECD81 /* IndicatorsViewController.m */; };
+		96172CD416CEDBE2000ECD81 /* Indicators.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96172CD316CEDBE2000ECD81 /* Indicators.plist */; };
+		96172CD616CEDBF3000ECD81 /* tractor.png in Resources */ = {isa = PBXBuildFile; fileRef = 96172CD516CEDBF3000ECD81 /* tractor.png */; };
 		9692471916CD4ED1003A1DEF /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9692471816CD4ED1003A1DEF /* ArcGIS.bundle */; };
 		9702E5BD144657AF00A46CA5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9702E5BC144657AF00A46CA5 /* Security.framework */; };
 		970DD3961354F0D600237D7F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970DD3951354F0D600237D7F /* CoreText.framework */; };
@@ -26,7 +31,6 @@
 		97FCF807165C1B1B00251D55 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FCF806165C1B1B00251D55 /* libc++.dylib */; };
 		97FCF809165C1B7D00251D55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF808165C1B7D00251D55 /* Default-568h@2x.png */; };
 		97FCF80B165C1C5000251D55 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FCF80A165C1C5000251D55 /* OpenGLES.framework */; };
-		AFD762AD124AAF5E00DBB854 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD762AC124AAF5E00DBB854 /* MainWindow-iPad.xib */; };
 		AFD762B2124AAF7800DBB854 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD762B0124AAF7800DBB854 /* Icon.png */; };
 		AFD762B3124AAF7800DBB854 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD762B1124AAF7800DBB854 /* Icon@2x.png */; };
 		AFD762B5124AAF8000DBB854 /* Icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD762B4124AAF8000DBB854 /* Icon-ipad.png */; };
@@ -39,16 +43,24 @@
 		1D6058910D05DD3D006BFB54 /* MapViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* MapViewDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewDemoViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* MapViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDemoViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* MapViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewDemoViewController.m; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MapViewDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDemo_Prefix.pch; sourceTree = "<group>"; };
 		3BB1591510D1CB860095F852 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BB1591710D1CB860095F852 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4B8B240414062A7C00820FDB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* MapViewDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MapViewDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		96172CA216CEAFCF000ECD81 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96172CA416CEB677000ECD81 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		96172CCA16CEB6F4000ECD81 /* QueryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryDetailsViewController.h; path = QueryTaskDemo/Classes/QueryDetailsViewController.h; sourceTree = "<group>"; };
+		96172CCB16CEB6F4000ECD81 /* QueryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryDetailsViewController.m; path = QueryTaskDemo/Classes/QueryDetailsViewController.m; sourceTree = "<group>"; };
+		96172CCD16CEB710000ECD81 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryViewController.h; path = QueryTaskDemo/Classes/QueryViewController.h; sourceTree = "<group>"; };
+		96172CCE16CEB710000ECD81 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryViewController.m; path = QueryTaskDemo/Classes/QueryViewController.m; sourceTree = "<group>"; };
+		96172CD016CEDBA4000ECD81 /* IndicatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatorsViewController.h; sourceTree = "<group>"; };
+		96172CD116CEDBA4000ECD81 /* IndicatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatorsViewController.m; sourceTree = "<group>"; };
+		96172CD316CEDBE2000ECD81 /* Indicators.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Indicators.plist; sourceTree = "<group>"; };
+		96172CD516CEDBF3000ECD81 /* tractor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tractor.png; sourceTree = "<group>"; };
 		9692471816CD4ED1003A1DEF /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
 		9702E5BC144657AF00A46CA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		970DD3951354F0D600237D7F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -57,7 +69,6 @@
 		97FCF806165C1B1B00251D55 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		97FCF808165C1B7D00251D55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		97FCF80A165C1C5000251D55 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		AFD762AC124AAF5E00DBB854 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		AFD762B0124AAF7800DBB854 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		AFD762B1124AAF7800DBB854 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AFD762B4124AAF8000DBB854 /* Icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-ipad.png"; sourceTree = "<group>"; };
@@ -90,10 +101,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				96172CD016CEDBA4000ECD81 /* IndicatorsViewController.h */,
+				96172CD116CEDBA4000ECD81 /* IndicatorsViewController.m */,
+				96172CCD16CEB710000ECD81 /* QueryViewController.h */,
+				96172CCE16CEB710000ECD81 /* QueryViewController.m */,
+				96172CCA16CEB6F4000ECD81 /* QueryDetailsViewController.h */,
+				96172CCB16CEB6F4000ECD81 /* QueryDetailsViewController.m */,
 				1D3623240D0F684500981E51 /* MapViewDemoAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MapViewDemoAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* MapViewDemoViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* MapViewDemoViewController.m */,
+				28D7ACF60DDB3853001CB0EB /* MapViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* MapViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -131,12 +148,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96172CD716CEDBFB000ECD81 /* images */,
+				96172CA216CEAFCF000ECD81 /* MainStoryboard.storyboard */,
 				97FCF808165C1B7D00251D55 /* Default-568h@2x.png */,
-				AFD762B0124AAF7800DBB854 /* Icon.png */,
-				AFD762B1124AAF7800DBB854 /* Icon@2x.png */,
-				2899E5210DE3E06400AC0155 /* MapViewDemoViewController.xib */,
+				96172CD316CEDBE2000ECD81 /* Indicators.plist */,
 				9692471816CD4ED1003A1DEF /* ArcGIS.bundle */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* MapViewDemo-Info.plist */,
 			);
 			name = Resources;
@@ -161,11 +177,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		96172CD716CEDBFB000ECD81 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AFD762B0124AAF7800DBB854 /* Icon.png */,
+				96172CA416CEB677000ECD81 /* map.png */,
+				96172CD516CEDBF3000ECD81 /* tractor.png */,
+				AFD762B1124AAF7800DBB854 /* Icon@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		AFD762AB124AAF5E00DBB854 /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
 				AFD762B4124AAF8000DBB854 /* Icon-ipad.png */,
-				AFD762AC124AAF5E00DBB854 /* MainWindow-iPad.xib */,
 				97FCF80A165C1C5000251D55 /* OpenGLES.framework */,
 			);
 			name = "Resources-iPad";
@@ -220,14 +246,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* MapViewDemoViewController.xib in Resources */,
-				AFD762AD124AAF5E00DBB854 /* MainWindow-iPad.xib in Resources */,
 				AFD762B2124AAF7800DBB854 /* Icon.png in Resources */,
 				AFD762B3124AAF7800DBB854 /* Icon@2x.png in Resources */,
 				AFD762B5124AAF8000DBB854 /* Icon-ipad.png in Resources */,
 				97FCF809165C1B7D00251D55 /* Default-568h@2x.png in Resources */,
 				9692471916CD4ED1003A1DEF /* ArcGIS.bundle in Resources */,
+				96172CA316CEAFCF000ECD81 /* MainStoryboard.storyboard in Resources */,
+				96172CA516CEB677000ECD81 /* map.png in Resources */,
+				96172CD416CEDBE2000ECD81 /* Indicators.plist in Resources */,
+				96172CD616CEDBF3000ECD81 /* tractor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +267,10 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MapViewDemoAppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* MapViewDemoViewController.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */,
+				96172CCC16CEB6F4000ECD81 /* QueryDetailsViewController.m in Sources */,
+				96172CCF16CEB710000ECD81 /* QueryViewController.m in Sources */,
+				96172CD216CEDBA4000ECD81 /* IndicatorsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +300,7 @@
 				);
 				PRODUCT_NAME = MapViewDemo;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -295,7 +325,7 @@
 				);
 				PRODUCT_NAME = MapViewDemo;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

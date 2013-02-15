@@ -11,22 +11,21 @@
 //
 
 #import "MapViewDemoAppDelegate.h"
-#import "MapViewDemoViewController.h"
+//#import "MapViewController.h"
 
 @implementation MapViewDemoAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+//@synthesize viewController;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
-    // Override point for customization after app launch    
-    [window setRootViewController:viewController];
-    [window makeKeyAndVisible];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+   // UITabBarController *rootNavigationController = (UITabBarController *)self.window.rootViewController;
+    //MapViewController *mapViewController = (MapViewController *)[rootNavigationController topViewController];
+    // Configure myViewController.
+    return YES;
 }
-
-
 
 
 @end

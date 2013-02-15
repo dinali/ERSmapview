@@ -12,15 +12,22 @@
 
 #import <UIKit/UIKit.h>
 
-@class MapViewDemoViewController;
+//@class MapViewController;
 
-@interface MapViewDemoAppDelegate : NSObject <UIApplicationDelegate> {
+@interface MapViewDemoAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
+
+/*
+@interface MapViewDemoAppDelegate : UIResponder <UIApplicationDelegate> {
     UIWindow *window;
-    MapViewDemoViewController *viewController;
+    MapViewController *viewController;
 }
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet MapViewDemoViewController *viewController;
+@property (nonatomic, strong) IBOutlet MapViewController *viewController;
+ */
 
-@end
 

@@ -10,9 +10,9 @@
 // See the use restrictions at http://help.arcgis.com/en/sdk/10.0/usageRestrictions.htm
 //
 
-#import "MapViewDemoViewController.h"
+#import "MapViewController.h"
 
-@implementation MapViewDemoViewController
+@implementation MapViewController
 
 @synthesize mapView = _mapView;
 @synthesize dynamicLayer = _dynamicLayer;
